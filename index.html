@@ -2,38 +2,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic page information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
 
+    <meta name="description" content="My personal portfolio website showcasing my skills, projects, and journey as a software student.">
+
+    <title>My Portfolio | Software Student</title>
+
+    <!-- CSS styling -->
     <style>
+        /* Reset default browser spacing */
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        /* General body styling */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f6fb;
             color: #222;
+            line-height: 1.6;
         }
 
+        /* Header section */
         header {
             background: #172554;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        nav {
-            background: #1e3a8a;
-            padding: 15px;
-            text-align: center;
+        header h1 {
+            font-size: 26px;
         }
 
+        /* Navigation menu */
         nav a {
             color: white;
             text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* Reusable button styling */
+        .button {
+            display: inline-block;
+            background: #ffffff;
+            color: #1e3a8a;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #dbeafe;
+            transform: translateY(-3px);
+        }
+
+        /* Main content sections */
+        section {
+            background: white;
+            margin: 30px auto;
+            padding: 35px;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        section h2 {
+            color: #1e40af;
+            margin-bottom: 18px;
+        }
+
+        /* Skills list */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #dbeafe;
+            color: #1e3a8a;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Project card */
+        .project-card {
+            background: #f4f6fb;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #2563eb;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Contact section */
+        .contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            background: #2563eb;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .contact-button:hover {
+            background: #1e40af;
+        }
+
+        /* Footer section */
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                margin: 20px 12px;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Website header -->
+    <header>
+        <h1>My Portfolio</h1>
+
+        <!-- Navigation links -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main introduction section -->
+    <main>
+
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Hello, I'm a Software Student!</h2>
+
+                <p>
+                    I am passionate about technology, programming,
+                    and creating beautiful websites.
+                    Welcome to my personal portfolio!
+                </p>
+
+                <a href="#projects" class="button">
+                    View My Projects
+                </a>
+            </div>
+        </div>
+
+        <!-- About me section -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p>
+                Hello! I am a software student learning how to
+                build websites and applications.
+            </p>
+
+            <p>
+                I enjoy learning new technologies, solving problems,
+                and improving my programming skills every day.
+            </p>
+        </section>
+
+        <!-- Skills section -->
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>Git</li>
+                <li>GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-card">
+                <h3>My First Portfolio</h3>
+
+                <p>
+                    A personal website introducing me, my skills,
+                    and my journey as a software student.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Interested in connecting or discussing a project?
+                Feel free to contact me.
+            </p>
+
+            <!-- Replace this example address with a suitable contact address -->
+            <a class="contact-button"
+               href="mailto:your-email@example.com">
+                Send Me an Email
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+
+        <p>Built with HTML and CSS.</p>
+
+        <a href="#top">Back to Top</a>
+    </footer>
+
+</body>
+</html>
+
             margin: 0 12px;
         }
 
