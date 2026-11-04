@@ -296,3 +296,94 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Projects section introduction */
+.projects-section {
+    text-align: center;
+}
+
+.section-description {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Projects grid layout */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+/* Individual project cards */
+.project-card {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Project icon */
+.project-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+/* Project title */
+.project-card h3 {
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+/* Project description */
+.project-card p {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+/* Technology tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Project links */
+.project-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    color: #172554;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+}
