@@ -128,23 +128,51 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* SKILLS SECTION */
+/* Skills section layout */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 25px;
 }
 
+/* Individual skill card */
 .skill-card {
     background: #f4f6fb;
     padding: 20px;
     border-radius: 10px;
+    transition: transform 0.3s;
 }
 
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skill title */
 .skill-card h3 {
-    color: #1e40af;
-    margin-bottom: 5px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* Progress bar background */
+.progress-bar {
+    background: #dbeafe;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Progress bar fill */
+.progress {
+    background: #2563eb;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* PROGRESS BARS */
