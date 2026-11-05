@@ -127,7 +127,55 @@ section h2 {
 .about-text p {
     margin-bottom: 10px;
 }
+/* About section layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
+/* Profile image placeholder */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #dbeafe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e40af;
+    font-size: 22px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* About text */
+.about-text {
+    flex: 1;
+}
+
+/* CV button */
+.cv-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.cv-button:hover {
+    background: #1e40af;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 /* Skills section layout */
 .skills-container {
     display: grid;
