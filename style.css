@@ -606,3 +606,103 @@ footer a {
         padding: 35px 20px 20px;
     }
 }
+
+/* =================================
+   DAY 8 - STICKY NAVIGATION
+================================= */
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sticky header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+    background: #172554;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Website logo */
+.site-header h1 {
+    color: white;
+    font-size: 25px;
+}
+
+/* Navigation layout */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+/* Navigation links */
+.main-nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.main-nav a:hover {
+    color: #93c5fd;
+}
+
+/* Animated underline */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #60a5fa;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Keep section headings visible below sticky header */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Keyboard accessibility */
+.main-nav a:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 5px;
+}
+
+/* Mobile navigation */
+@media (max-width: 600px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+}
