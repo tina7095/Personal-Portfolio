@@ -704,3 +704,148 @@ section {
         font-size: 14px;
     }
 }
+
+/* =================================
+   DAY 9 - ANIMATED HERO SECTION
+================================= */
+
+.hero {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #2563eb
+    );
+
+    color: white;
+}
+
+/* Hero content */
+.hero-content {
+    max-width: 750px;
+    animation: fadeIn 1.2s ease;
+}
+
+/* Welcome text */
+.hero-greeting {
+    color: #bfdbfe;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Main heading */
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* Animated subtitle */
+.hero-subtitle {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: #dbeafe;
+}
+
+#typing-text {
+    color: #93c5fd;
+    font-weight: bold;
+}
+
+/* Typing cursor */
+.cursor {
+    color: white;
+    font-weight: bold;
+    animation: blink 0.7s infinite;
+}
+
+/* Hero description */
+.hero-content > p:not(.hero-greeting) {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Hero buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Secondary button */
+.outline-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.outline-button:hover {
+    background: white;
+    color: #172554;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cursor animation */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 19px;
+    }
+
+    .hero-content > p:not(.hero-greeting) {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hero-content {
+        animation: none;
+    }
+
+    .cursor {
+        animation: none;
+    }
+}
